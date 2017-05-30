@@ -14,9 +14,9 @@ RUN useradd app
 RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
 
-ADD Gemfile $APP_HOME/
-ADD Gemfile.lock $APP_HOME/
-ADD vendor $APP_HOME/vendor
+#ADD Gemfile $APP_HOME/
+#ADD Gemfile.lock $APP_HOME/
+#ADD vendor $APP_HOME/vendor
 RUN bundle install -j 8
 
 ADD . $APP_HOME
